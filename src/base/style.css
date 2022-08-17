@@ -1,0 +1,59 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.content {
+  display: block;
+  width: 400px;
+  height: 300px;
+  border: solid 1px;
+}
+
+.body {
+  position: relative;
+}
+
+.target {
+  background: var(--target-url);
+}
+
+.diff {
+  position: relative;
+}
+
+.diff:after {
+  mix-blend-mode: difference;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--target-url);
+}
+
+.diff .body {
+  width: 100%;
+  height: 100%;
+}
+
+.supperposition {
+  position: relative;
+}
+
+.supperposition:after {
+  opacity: 0.3;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--target-url);
+}
+
+.supperposition .body {
+  width: 100%;
+  height: 100%;
+}
